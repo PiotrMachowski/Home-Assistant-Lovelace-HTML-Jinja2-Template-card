@@ -1,4 +1,4 @@
-This card displays provided data template as an HTML content of a card. It uses exactly the same engine as Home Assistant in *Developer tools*.
+This card displays provided Jinja2 template as an HTML content of a card. It uses exactly the same engine as Home Assistant in *Developer tools*.
 
 ## Configuration options
 
@@ -19,7 +19,7 @@ This card displays provided data template as an HTML content of a card. It uses 
  
 ## Example usage
 
-![Example](https://github.com/PiotrMachowski/Home-Assistant-Lovelace-HTML-Template-card/raw/master/example.gif)
+![Example](https://github.com/PiotrMachowski/Home-Assistant-Lovelace-HTML-Jinja2-Template-card/raw/master/example.gif)
 
 
 ```yaml
