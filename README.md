@@ -60,3 +60,5 @@ views:
 * If content does not contain entity id (e.g. because of loop) you have to provide it manually in `entities` to enable refresh of the card when it will be updated.
 * If you want to enable refreshing for every change in HA use flag `always_update: true`. **WARNING:** this may cause heavy load of browser/HA. Best to use with flag `do_not_parse: true`.
 * To check if your content is correct without changing configuration use *Developer tools*.
+
+<a href="https://www.buymeacoffee.com/PiotrMachowski" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
