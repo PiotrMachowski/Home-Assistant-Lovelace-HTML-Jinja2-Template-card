@@ -37,6 +37,13 @@ class HtmlTemplateCard extends HTMLElement {
         if (this._config && this._hass && !this._entities) {
             this.calculateEntites();
         }
+        if (!this._config.picture_elements_mode) {
+            let haCard = document.createElement("ha-card");
+            haCard.style.padding = "16px";
+            this._rootElement = haCard;
+        } else {
+            this._rootElement = document.createElement("div");
+        }
     }
 
     calculateEntites() {
@@ -66,6 +73,9 @@ class HtmlTemplateCard extends HTMLElement {
         } else {
             this.render(content);
         }
+        if (!(this._rootElement in this.children)) {
+            this.appendChild(this._rootElement);
+        }
     }
 
     render(content) {
@@ -73,9 +83,9 @@ class HtmlTemplateCard extends HTMLElement {
         if (this._config.title) {
             header = `<div class="card-header" style="padding: 8px 0 16px 0;"><div class="name">${this._config.title}</div></div>`;
         }
-        this.innerHTML = this._config.picture_elements_mode
+        this._rootElement.innerHTML = this._config.picture_elements_mode
             ? content
-            : `<ha-card id="htmlCard" style="padding: 16px">${header}<div>${content}</div></ha-card>`;
+            : `${header}<div>${content}</div>`;
     }
 
     getCardSize() {
