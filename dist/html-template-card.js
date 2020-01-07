@@ -59,7 +59,10 @@ class HtmlTemplateCard extends HTMLElement {
             content = content.replace(/\r?\n|\r/g, "</br>");
         }
         if (!this._config.do_not_parse) {
-            this._hass.callApi("post", "template", {"template": content}).then(t => this.render(t));
+            this._hass.connection.subscribeMessage(
+                (msg) => this.render(msg.result),
+                {type: "render_template", template: content}
+            );
         } else {
             this.render(content);
         }
