@@ -11,6 +11,8 @@ This card displays provided Jinja2 template as an HTML content of a card. It use
 | `always_update` | `boolean` | `false` | `false` | Enables refreshing the card with every change of entity |
 | `picture_elements_mode` | `boolean` | `false` | `false` | Enables picture-elements mode |
 | `entities` | `list` | `false` | `[]` | List of additional entities whose updates should trigger refresh of the card |
+| `padding` | `string` | `false` | `16px` | padding of `ha-card` element |
+| `header_style` | `string` | `false` | `padding: 8px 0 16px 0;` | in-line CSS for `div.card-header`, which contains card title |
 
 ### Templates
 

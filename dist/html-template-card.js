@@ -39,7 +39,7 @@ class HtmlTemplateCard extends HTMLElement {
         }
         if (!this._config.picture_elements_mode) {
             let haCard = document.createElement("ha-card");
-            haCard.style.padding = "16px";
+            haCard.style.padding = this._config.padding ? this._config.padding : "16px";
             this._rootElement = haCard;
         } else {
             this._rootElement = document.createElement("div");
@@ -81,7 +81,8 @@ class HtmlTemplateCard extends HTMLElement {
     render(content) {
         let header = ``;
         if (this._config.title) {
-            header = `<div class="card-header" style="padding: 8px 0 16px 0;"><div class="name">${this._config.title}</div></div>`;
+            let header_style = this._config.header_style ? this._config.header_style : "padding: 8px 0 16px 0;";
+            header = `<div class="card-header" style="${header_style}"><div class="name">${this._config.title}</div></div>`;
         }
         this._rootElement.innerHTML = this._config.picture_elements_mode
             ? content
