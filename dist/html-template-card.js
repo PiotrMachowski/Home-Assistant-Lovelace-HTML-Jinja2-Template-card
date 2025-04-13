@@ -94,3 +94,9 @@ class HtmlTemplateCard extends HTMLElement {
 }
 
 customElements.define('html-template-card', HtmlTemplateCard);
+
+window.customCards.push({
+  type: 'html-template-card',
+  name: 'HTML Template Card',
+  description: 'A card that renders the provided Jinja2 template as HTML.'
+});
