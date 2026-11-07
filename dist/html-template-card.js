@@ -68,7 +68,7 @@ class HtmlTemplateCard extends HTMLElement {
         if (!this._config.do_not_parse) {
             this._hass.connection.subscribeMessage(
                 (msg) => this.render(msg.result),
-                {type: "render_template", template: content}
+                {type: "render_template", template: content, variables: {user: this._hass.user ? this._hass.user.name : ""}}
             );
         } else {
             this.render(content);
