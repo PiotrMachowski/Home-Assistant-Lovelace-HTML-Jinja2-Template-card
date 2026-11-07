@@ -26,6 +26,7 @@ This card displays provided Jinja2 template as an HTML content of a card. It use
 
  * Entity state, example: `{{ states('sun.sun') }}`
  * Entity attribute, example: `{{ state_attr('sun.sun', 'elevation') }]`
+ * Logged-in username, example: `{{ user }}`
  * Detailed documentation: [*Templating*](https://www.home-assistant.io/docs/configuration/templating/)
  
 ## Example usage
